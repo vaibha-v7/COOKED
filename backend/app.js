@@ -19,8 +19,8 @@ const REDIRECT_URI = process.env.REDIRECT_URI;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 app.use(cors({
-  origin: [process.env.FRONTEND_URL || 'http://localhost:5173',], 
-  credentials: true 
+  origin: '*',
+  credentials: false
 }));
 
 app.use(express.json());
