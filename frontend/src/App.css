@@ -1,0 +1,175 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+}
+
+.glass {
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  padding: 2.75rem;
+  border-radius: 28px;
+  backdrop-filter: blur(12px);
+  background: rgba(8, 10, 20, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.32);
+  color: #f6f7fb;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #c8ccff;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.3rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+.lede {
+  margin: 0 0 1.8rem;
+  color: #d8dcff;
+  font-size: 1.05rem;
+  max-width: 54ch;
+
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.spotify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: none;
+  color: #0d1117;
+  background: linear-gradient(135deg, #1db954, #20d860);
+  padding: 0.85rem 1.4rem;
+  border-radius: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 40px rgba(32, 216, 96, 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.spotify-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 50px rgba(32, 216, 96, 0.45);
+  filter: saturate(1.1);
+}
+
+.spotify-btn:focus-visible {
+  outline: 2px solid #9bf6c6;
+  outline-offset: 4px;
+}
+
+.spotify-btn .icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(13, 17, 23, 0.08);
+  border-radius: 50%;
+}
+
+.spotify-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.ghost-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e8ff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 0.82rem 1.2rem;
+  font-weight: 600;
+  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
+}
+
+.ghost-btn:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.7rem;
+  justify-items: center;
+}
+
+.pill {
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #d6daf8;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.orb {
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.orb-one {
+  width: 320px;
+  height: 320px;
+  top: 4%;
+  left: 8%;
+  background: radial-gradient(circle, #4ff2b5 0%, rgba(79, 242, 181, 0) 70%);
+}
+
+.orb-two {
+  width: 420px;
+  height: 420px;
+  bottom: -6%;
+  right: -4%;
+  background: radial-gradient(circle, #6d7cff 0%, rgba(109, 124, 255, 0) 70%);
+}
+
+.glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .glass {
+    padding: 2rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .spotify-btn,
+  .ghost-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
