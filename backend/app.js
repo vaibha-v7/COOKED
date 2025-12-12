@@ -87,17 +87,23 @@ app.get("/callback", async (req, res) => {
 
 
 app.get("/profile", async (req, res) => {
-  // Get token from Authorization header (Bearer token)
-  const authHeader = req.headers.authorization;
-  const token = authHeader?.split(' ')[1]; // Extract token from "Bearer token"
+  try {
+    const authHeader = req.headers.authorization;
+    const token = authHeader?.split(' ')[1];
 
-  if (!token) return res.status(401).json({ error: "No token" });
+    if (!token) return res.status(401).json({ error: "No token" });
 
-  const response = await axios.get("https://api.spotify.com/v1/me", {
-    headers: { Authorization: `Bearer ${token}` }
-  });
+    const response = await axios.get("https://api.spotify.com/v1/me", {
+      headers: { Authorization: `Bearer ${token}` }
+    });
 
-  res.json(response.data);
+    res.json(response.data);
+  } catch (err) {
+    const status = err.response?.status || 500;
+    const data = err.response?.data || { error: err.message };
+    console.error("/profile error:", status, data);
+    res.status(status).json(data);
+  }
 });
 
 app.get("/top-tracks", async (req, res) => {
