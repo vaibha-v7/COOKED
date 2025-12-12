@@ -72,7 +72,7 @@ const TopGenres = () => {
         )}
 
         <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl">
-          <h2 className="mb-6 text-2xl font-bold text-[#e7e9ff]">Your top genres</h2>
+          <h2 className="mb-6 text-2xl font-bold text-[#e7e9ff]">Your all time top genres 🤢</h2>
           <div className="mb-8 space-y-4">
             {genres?.map((genre, idx) => (
               <div key={idx} className="flex items-center gap-4">

@@ -13,7 +13,7 @@ const Main = () => {
         </h1>
 
         <p className="max-w-2xl text-xl text-[#c5c8e8] sm:text-2xl">
-          Get absolutely <span className="font-bold text-[#ff3ca6]">roasted</span> by your own music taste <span className="align-middle">🔥</span>
+          Get <span className="font-bold text-[#ff3ca6]">roasted</span> by your all time Spotify stats<span className="align-middle">🔥</span>
         </p>
 
         <div className="flex items-center justify-center gap-5 text-3xl sm:text-4xl">
@@ -41,7 +41,7 @@ const Main = () => {
       </div>
 
       <footer className="absolute bottom-4 left-0 right-0 text-center">
-        <p className="text-sm text-[#a4a7c7]">created by <a href="https://twitter.com/vaibha_v7" target="_blank" rel="noopener noreferrer" className="text-[#ff8c32] hover:underline">@vaibha_v7</a></p>
+        <p className="text-sm text-[#a4a7c7]">created by <a href="https://twitter.com/V7Vaibhav" target="_blank" rel="noopener noreferrer" className="text-[#ff8c32] hover:underline">@vaibha_v7</a></p>
       </footer>
     </div>
   )
