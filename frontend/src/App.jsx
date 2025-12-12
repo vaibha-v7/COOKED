@@ -5,10 +5,12 @@ import Roast from './components/Roast'
 import TopTracks from './components/TopTracks'
 import TopGenres from './components/TopGenres'
 import Personality from './components/Personality'
+import BackgroundMusic from './components/BackgroundMusic'
 
 function App() {
   return (
     <HashRouter>
+      <BackgroundMusic />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/profile" element={<Profile />} />

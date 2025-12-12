@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const TopGenres = () => {
   const [genres, setGenres] = useState(null)
@@ -56,6 +57,7 @@ const TopGenres = () => {
     )
   }
 
+  const navigate = useNavigate()
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#0b0324] [background:radial-gradient(circle_at_20%_20%,rgba(111,66,193,0.28),transparent_32%),_radial-gradient(circle_at_80%_10%,rgba(18,144,255,0.22),transparent_32%),_radial-gradient(circle_at_50%_90%,rgba(255,124,0,0.18),transparent_38%),_linear-gradient(160deg,#0b0324_0%,#0c0a1a_55%,#0c0a1a_100%)] px-4 py-8 font-['Space_Grotesk']">
       <div className="w-full max-w-3xl">
@@ -86,12 +88,12 @@ const TopGenres = () => {
 
         </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <a href="/#/" className="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-[#e7e9ff] transition hover:bg-white/15">
+            <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-[#e7e9ff] transition hover:bg-white/15">
               Back to Home
-            </a>
-            <a href="/#/personality" className="inline-flex items-center gap-2 rounded-full bg-[#1db954] px-6 py-3 text-sm font-semibold text-[#0c0f12] shadow-[0_10px_30px_rgba(29,185,84,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(29,185,84,0.4)]">
+            </button>
+            <button onClick={() => navigate('/personality')} className="inline-flex items-center gap-2 rounded-full bg-[#1db954] px-6 py-3 text-sm font-semibold text-[#0c0f12] shadow-[0_10px_30px_rgba(29,185,84,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(29,185,84,0.4)]">
               Next
-            </a>
+            </button>
           </div>
       </div>
     </div>
