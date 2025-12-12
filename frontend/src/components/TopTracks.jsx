@@ -7,6 +7,7 @@ const TopTracks = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchTracks = async () => {
       try {
@@ -57,7 +58,6 @@ const TopTracks = () => {
     )
   }
 
-  const navigate = useNavigate()
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#0b0324] [background:radial-gradient(circle_at_20%_20%,rgba(111,66,193,0.28),transparent_32%),_radial-gradient(circle_at_80%_10%,rgba(18,144,255,0.22),transparent_32%),_radial-gradient(circle_at_50%_90%,rgba(255,124,0,0.18),transparent_38%),_linear-gradient(160deg,#0b0324_0%,#0c0a1a_55%,#0c0a1a_100%)] px-4 py-8 font-['Space_Grotesk']">
       <div className="w-full max-w-3xl">
