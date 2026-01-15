@@ -6,8 +6,33 @@ const Main = () => {
   }
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0b0324] [background:radial-gradient(circle_at_20%_20%,rgba(111,66,193,0.28),transparent_32%),_radial-gradient(circle_at_80%_10%,rgba(18,144,255,0.22),transparent_32%),_radial-gradient(circle_at_50%_90%,rgba(255,124,0,0.18),transparent_38%),_linear-gradient(160deg,#0b0324_0%,#0c0a1a_55%,#0c0a1a_100%)] px-4 py-12 text-[#e7e9ff] font-['Space_Grotesk'] sm:px-6 lg:px-8">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#0b0324] [background:radial-gradient(circle_at_20%_20%,rgba(111,66,193,0.28),transparent_32%),_radial-gradient(circle_at_80%_10%,rgba(18,144,255,0.22),transparent_32%),_radial-gradient(circle_at_50%_90%,rgba(255,124,0,0.18),transparent_38%),_linear-gradient(160deg,#0b0324_0%,#0c0a1a_55%,#0c0a1a_100%)] px-4 py-12 text-[#e7e9ff] font-['Space_Grotesk'] sm:px-6 lg:px-8">
+      {/* Warning Banner */}
+      <div className="w-full mb-8 max-w-4xl">
+        <div className="rounded-lg border-2 border-[#ff3ca6] bg-[#1a0f2e] p-6 shadow-[0_0_30px_rgba(255,60,166,0.3)]">
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 text-3xl">⚠️</div>
+            <div className="flex-1">
+              <h2 className="mb-3 text-lg font-bold text-[#ff3ca6]">Important Update - Spotify API Restrictions</h2>
+              <p className="mb-3 text-sm text-[#c5c8e8]">
+                As of May 15th, 2025, Spotify only accepts applications from <span className="font-semibold">established organizations</span>, not individuals. This means the login feature requires special authorization.
+              </p>
+              <p className="mb-4 text-sm text-[#c5c8e8]">
+                <span className="font-semibold">Want to use this app?</span> Please contact me via email and I can help get you access. Reach out for details! 📧
+              </p>
+              <a
+                href="mailto:vaibhav00070@gmail.com"
+                className="inline-flex items-center gap-2 rounded-full bg-[#ff3ca6] px-6 py-2 text-sm font-semibold text-[#0b0324] transition hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(255,60,166,0.4)]"
+              >
+                📧 Email Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="relative z-10 flex w-full max-w-4xl flex-col items-center gap-8 text-center">
+        
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-[0.02em] text-[#ff8c32] [text-shadow:4px_4px_0_#0d0d0d,6px_6px_0_#000000] font-['Press_Start_2P']">
           COOKED
         </h1>
